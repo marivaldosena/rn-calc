@@ -9,4 +9,5 @@ const Painel = () => {
   );
 };
 
-export default Painel;
+export { Painel };
+

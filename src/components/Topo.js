@@ -9,4 +9,5 @@ const Topo = () => {
   );
 };
 
-export default Topo;
+export { Topo };
+

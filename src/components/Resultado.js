@@ -9,4 +9,5 @@ const Resultado = () => {
   );
 };
 
-export default Resultado;
+export { Resultado };
+ 
