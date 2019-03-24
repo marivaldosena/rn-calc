@@ -1,11 +1,10 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+
+import Cabecalho from './Cabecalho';
 
 const Topo = () => {
   return (
-    <View>
-      <Text>Topo.js</Text>
-    </View>
+    <Cabecalho />
   );
 };
 
