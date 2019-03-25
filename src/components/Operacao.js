@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Picker, StyleSheet } from 'react-native';
 
-const Operacao = () => {
-  const { principal } = estilos;
+class Operacao extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      operacao: '',
+    };
+  }
 
-  return (
-    <Picker style={principal}>
-      <Picker.Item label='Soma' value='soma' />
-      <Picker.Item label='Subtração' value='subtracao' />
-      <Picker.Item label='Multiplicação' value='multiplicacao' />
-      <Picker.Item label='Divisão' value='divisao' />
-    </Picker>
-  );
-};
+  render() {
+    const { principal } = estilos;
+  
+    return (
+      <Picker
+        style={principal}
+        selectedValue={this.state.operacao}
+        onValuechange={operacao => this.setState({ operacao })}
+      >
+        <Picker.Item label='Soma' value='soma' />
+        <Picker.Item label='Subtração' value='subtracao' />
+        <Picker.Item label='Multiplicação' value='multiplicacao' />
+        <Picker.Item label='Divisão' value='divisao' />
+      </Picker>
+    );
+  }
+}
 
 const estilos = StyleSheet.create({
   principal: {
